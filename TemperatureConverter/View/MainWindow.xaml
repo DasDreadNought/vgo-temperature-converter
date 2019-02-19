@@ -7,9 +7,73 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <StackPanel>
-        <TextBox x:Name="textBox"/>
-        <Button Content="Convert to Celcius"
-                Click="ConvertToCelsius"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox x:Name="Fahrenheit"
+                     Grid.Row="0"
+                     Grid.Column="0"/>
+            <TextBlock Text="°F"
+                       FontSize="30"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+            <Button Content="Convert to Celcius"
+                Click="ConvertToCelsius"
+                     Grid.Row="0"
+                     Grid.Column="2"/>
+            <TextBox x:Name="Celcius"
+                     Grid.Row="0"
+                     Grid.Column="3"/>
+            <TextBlock Text="°C"
+                       FontSize="30"
+                       Grid.Row="0"
+                       Grid.Column="4"
+                       />
+            <Button Content="Convert to Fahrenheit"
+                Click="ConvertToFahrenheit"
+                     Grid.Row="0"
+                     Grid.Column="5"/>
+
+            <TextBlock Text="Celcius:"
+                       Grid.Row="01"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       FontWeight="Bold"
+                       Padding="2"
+                       FontSize="30"/>
+            <TextBlock x:Name="CelciusResult"
+                       FontSize="30"
+                       Grid.Row="1"
+                       Grid.Column="2"
+                       FontWeight="Bold"
+                       Padding="2"
+                       Background="AntiqueWhite"
+                       TextAlignment="Center"/>
+            <TextBlock Text="Fahrenheit:"
+                       FontSize="30"
+                       Grid.Row="1"
+                       Grid.ColumnSpan="2"
+                       Grid.Column="3"
+                       FontWeight="Bold"/>
+            <TextBlock x:Name="FahrenheitResult"
+                       FontSize="30"
+                       Grid.Row="1"
+                       Grid.Column="5"
+                       Padding="2"
+                       Background="AntiqueWhite"
+                       TextAlignment="Center"/>
+        </Grid>
+        
     </StackPanel>
    
 </Window>
